@@ -1,34 +1,38 @@
-baseURL: "https://amirpourmand.ir/"
-title: Amir Pourmand
+baseURL: "https://<username>.github.io/<repo-name>/"
+title: گاه‌نوشته‌های ابوالفضل مختاری
 theme: PaperMod
-copyright: All content on this site is licensed under a [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
+copyright: کلیه حقوق محفوظ است. انتشار مطالب تحت مجوز [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) آزاد است.
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
 
+defaultContentLanguage: fa
+languageCode: fa-ir
+
+languages:
+  fa:
+    languageName: "فارسی"
+    weight: 1
+    languageDirection: rtl
+    title: گاه‌نوشته‌های ابوالفضل مختاری
+
 pagination:
   disableAliases: false
   pagerSize: 10
-
-googleAnalytics: G-WEG841BBW9
 
 minify:
   disableXML: true
   minifyOutput: true
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Amir Pourmand Personal Blog
-  description: |
-    I am Amir Pourmand and this is my personal blog. 
-    I write about everything that comes into my mind and things I experience like: Machine learning, Data Science, Website and etc.
-  keywords: [Blog, Portfolio, AmirPourmand, AI]
-  author: Amir
-  # author: ["Me", "You"] # multiple authors
-  images: ["opengraph/opengraph.png"]
-  DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
+  env: production
+  title: گاه‌نوشته‌های ابوالفضل مختاری
+  description: "گاه‌نوشته‌هایی درباره تفکر سیستمی، علوم زمین، متالرنینگ و پالایش نویز."
+  keywords: [وبلاگ, توسعه فردی, متالرنینگ, زمین‌شناسی, تفکر سیستمی]
+  author: ابوالفضل مختاری
+  DateFormat: "2 January 2006"
+  defaultTheme: auto
   disableThemeToggle: false
 
   ShowReadingTime: true
@@ -49,140 +53,48 @@ params:
   tocopen: false
 
   assets:
-    # disableHLJS: true # to disable highlight.js
     disableFingerprinting: true
-    favicon: ""
-    favicon16x16: ""
-    favicon32x32: ""
-    apple_touch_icon: ""
-    safari_pinned_tab: ""
 
   label:
-    text: "Home"
-    icon:
+    text: "خانه"
     iconHeight: 35
 
-  # profile-mode
-  profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
-
-  # home-info mode
+  # بخش پیام خوش‌آمدگویی بالای صفحه اصلی
   homeInfoParams:
-    Title: "Amir Pourmand"
+    Title: "ابوالفضل مختاری"
     Content: |
-      Welcome to my blog. Here, I will share my thoughts \
-      You can click [here](https://aprd.ir) to visit my Farsi Blog.
+      به باغ یادگیری من خوش آمدید.  
+      اینجا فضایی است برای یادگیری عمیق، تفکر سیستمی، علوم زمین و پرورش ایده‌ها دور از هیاهو و نویزهای روزمره.
 
-  socialIcons:
-    - name: Farsi Site
-      url: "https://aprd.ir"
-    - name: email
-      url: "mailto:pourmand1376@gmail.com"
-    - name: github
-      url: "https://github.com/pourmand1376"
-    - name: substack
-      url: https://substack.com/@pourmand1376
-    - name: linkedin
-      url: "https://www.linkedin.com/in/amir-pourmand"
-    - name: stackoverflow
-      url: "https://stackoverflow.com/users/4201765"
-    # - name: twitter
-    #   url: "https://twitter.com/_amirpourmand"
-    - name: kaggle
-      url: "https://kaggle.com/amirpourmand"
-    - name: huggingface
-      url: "https://huggingface.co/pourmand1376/"
-    - name: rss
-      url: "https://amirpourmand.ir/index.xml"
-
-  analytics:
-    google:
-      SiteVerificationTag: "l6RhusmfgSX-TJDRlJA7d5bn6MknReY9_IE3ds5OyGY"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
-
-  cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
-
-  editPost:
-    URL: "https://github.com/pourmand1376/hugopapermod_english/tree/master/content/"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
-
-  # for search
-  # https://fusejs.io/api/options.html
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    # - identifier: categories
-    #   name: Categories
-    #   url: /categories/
-    # weight: 10
     - identifier: archives
-      name: Archives
+      name: آرشیو
       url: /archives/
       weight: 10
     - identifier: search
-      name: Search
+      name: جستجو
       url: /search/
       weight: 15
     - identifier: tags
-      name: Tags
+      name: موضوعات
       url: /tags/
       weight: 20
     - identifier: bio
-      name: Bio
+      name: درباره من
       url: /bio/
       weight: 30
-    - identifier: cv
-      name: CV
-      url: /cv/
-      weight: 40
-    - identifier: code
-      name: Code
-      url: /code/
-      weight: 50
 
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
   goldmark:
     renderer:
       unsafe: true
-
   highlight:
     noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
 
 outputs:
   home:
     - HTML
     - RSS
-    - JSON # is necessary
-
+    - JSON
